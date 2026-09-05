@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Book a Meeting — Sell Mek</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="booking-page">
+<!-- HEADER -->
+<header class="header">
+<a class="logo" href="index.html"><img alt="Sell Mek — Grow Your Digital Business" class="site-logo" src="assets/images/logo.png"/></a>
+<div class="header-announcement" aria-label="Sell Mek marketing message">
+  <div class="header-announcement-track">
+    <span>WELCOME TO SELL MEK DIGITAL AGENCY</span><b>✦</b>
+    <span>STRATEGY</span><b>✦</b>
+    <span>CREATIVE</span><b>✦</b>
+    <span>TECHNOLOGY</span><b>✦</b>
+    <span>GROWTH MARKETING</span><b>✦</b>
+    <span>WEB DESIGN</span><b>✦</b>
+    <span>BRANDING</span><b>✦</b>
+    <span>SOCIAL MEDIA</span><b>✦</b>
+    <span>YOUR DIGITAL GROWTH PARTNER</span><b>✦</b>
+    <span>WELCOME TO SELL MEK DIGITAL AGENCY</span><b>✦</b>
+    <span>STRATEGY</span><b>✦</b>
+    <span>CREATIVE</span><b>✦</b>
+    <span>TECHNOLOGY</span><b>✦</b>
+    <span>GROWTH MARKETING</span><b>✦</b>
+    <span>WEB DESIGN</span><b>✦</b>
+    <span>BRANDING</span><b>✦</b>
+    <span>SOCIAL MEDIA</span><b>✦</b>
+    <span>YOUR DIGITAL GROWTH PARTNER</span><b>✦</b>
+  </div>
+</div>
+<nav aria-label="Primary navigation" class="nav">
+<a href="index.html"> <i aria-hidden="true" class="fa-solid fa-house"></i><span>Home</span></a>
+<a href="about.html"> <i aria-hidden="true" class="fa-solid fa-circle-info"></i><span>About</span></a>
+<a href="services.html"> <i aria-hidden="true" class="fa-solid fa-layer-group"></i><span>Services</span></a><a href="tools.html"><i class="fa-solid fa-toolbox" aria-hidden="true"></i><span>Our Tools</span></a>
+<a href="history.html" class="history-nav-link"> <i aria-hidden="true" class="fa-solid fa-clock-rotate-left"></i><span>Meeting History</span><b class="meeting-badge" aria-label="Booked meetings">0</b></a>
+<a href="solution.html"> <i aria-hidden="true" class="fa-solid fa-lightbulb"></i><span>Solution</span></a>
+<a href="contact.html"><i class="fa-solid fa-headset" aria-hidden="true"></i><span>Contact Us</span></a>
+</nav>
+</header>
+
+<!-- HERO -->
+<a class="booking-back" href="index.html" onclick="if (history.length > 1) { event.preventDefault(); history.back(); }" aria-label="Go back">
+  <i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span>Back</span>
+</a>
+<section class="booking-hero">
+<span class="detail-kicker">LET'S TALK</span>
+<h1 class="detail-title">Book a <span>Meeting</span></h1>
+<p class="detail-intro">Tell us a bit about your business and pick a date and time that works for you. Our team will confirm the meeting and send a Zoom link straight to your inbox.</p>
+</section>
+
+<!-- BOOKING LAYOUT -->
+<section class="booking-layout">
+
+<!-- FORM CARD -->
+<div class="booking-form-card">
+<form id="booking-form" novalidate="">
+<div class="booking-form-row">
+<div class="booking-field">
+<label for="bk-name">Full Name *</label>
+<input autocomplete="name" id="bk-name" name="name" placeholder="Your full name" required="" type="text"/>
+</div>
+<div class="booking-field">
+<label for="bk-email">Work Email *</label>
+<input autocomplete="email" id="bk-email" name="email" placeholder="you@company.com" required="" type="email"/>
+</div>
+</div>
+
+<div class="booking-form-row">
+<div class="booking-field">
+<label for="bk-phone">Phone Number <small>(optional)</small></label>
+<input autocomplete="tel" id="bk-phone" name="phone" placeholder="+1 555 000 0000" type="tel"/>
+</div>
+<div class="booking-field">
+<label for="bk-company">Company Name *</label>
+<input autocomplete="organization" id="bk-company" name="company" placeholder="Your company" required="" type="text"/>
+</div>
+</div>
+
+<div class="booking-form-row">
+<div class="booking-field">
+<label for="bk-date">Preferred Date *</label>
+<input id="bk-date" name="date" required="" type="date"/>
+</div>
+<div class="booking-field">
+<label for="bk-time">Preferred Time *</label>
+<input id="bk-time" name="time" required="" type="time"/>
+</div>
+</div>
+
+<div class="booking-form-row">
+<div class="booking-field">
+<label for="bk-service">Service Interested In</label>
+<select id="bk-service" name="service">
+<option value="Next-gen Human Resources">Next-gen Human Resources</option>
+<option value="Market Growth Consulting">Market Growth Consulting</option>
+<option value="Business Process Improvement">Business Process Improvement</option>
+<option value="Something else">Something else</option>
+</select>
+</div>
+<div class="booking-field">
+<label for="bk-meeting-type">Meeting Type</label>
+<select id="bk-meeting-type" name="meetingType">
+<option value="Zoom Video Call">Zoom Video Call</option>
+<option value="Phone Call">Phone Call</option>
+</select>
+</div>
+</div>
+
+<div class="booking-field">
+<label for="bk-link">Website or YouTube Channel <small>(optional)</small></label>
+<input id="bk-link" name="clientLink" placeholder="https://yourwebsite.com or your YouTube channel link" type="url"/>
+<small class="booking-field-hint">Share an existing site or channel so our strategist can review it before the call.</small>
+</div>
+
+<div class="booking-field">
+<label for="bk-details">Project Details</label>
+<textarea id="bk-details" name="details" placeholder="Tell us briefly what you'd like to discuss..."></textarea>
+</div>
+
+<button class="cta-red-btn booking-submit" type="submit">Confirm Meeting Request <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></button>
+<p class="booking-note">We typically reply within one business day with a calendar confirmation and Zoom link.</p>
+</form>
+
+<!-- SUCCESS OVERLAY -->
+<div aria-hidden="true" class="booking-success" id="booking-success">
+<svg class="booking-success-check" viewbox="0 0 80 80">
+<circle cx="40" cy="40" r="34"></circle>
+<path d="M24 41 L35 52 L57 28"></path>
+</svg>
+<h2>Your meeting booking is successful!</h2>
+<p id="booking-success-message">We've received your request. You'll get an email from our agency confirming the details, along with a Zoom link for your call.</p>
+<div class="booking-success-actions">
+<a class="cta-red-btn" href="index.html">Back to Home</a>
+<button class="cta-ghost-btn" id="booking-again-btn" type="button">Book Another Meeting</button>
+</div>
+</div>
+</div>
+
+<!-- SIDE INFO -->
+<aside class="booking-side">
+<div class="booking-side-card">
+<span class="booking-side-kicker">ONBOARDING PROCESS</span>
+<h3>What happens next<small>A clear, structured path from booking to kickoff.</small></h3>
+<ul class="booking-side-list">
+<li><i aria-hidden="true" class="fa-solid fa-envelope-circle-check"></i><div><strong>Confirmation &amp; calendar hold</strong>You'll receive a written confirmation with your requested date, time and meeting agenda.</div></li>
+<li><i aria-hidden="true" class="fa-solid fa-video"></i><div><strong>Secure Zoom invite</strong>A calendar invite with a one-click Zoom link is sent ahead of your call, no downloads required.</div></li>
+<li><i aria-hidden="true" class="fa-solid fa-user-tie"></i><div><strong>Dedicated strategist</strong>A senior team member reviews your business beforehand and leads the discussion directly — no account handoffs.</div></li>
+<li><i aria-hidden="true" class="fa-solid fa-file-signature"></i><div><strong>Follow-up proposal</strong>Within 48 hours you'll receive a tailored scope and next-step recommendation in writing.</div></li>
+</ul>
+</div>
+<div class="booking-side-card booking-side-trust">
+<span class="booking-side-kicker">WHY TEAMS CHOOSE SELL MEK</span>
+<h3>Built for enterprise-grade delivery</h3>
+<ul class="booking-side-list">
+<li><i aria-hidden="true" class="fa-solid fa-bolt"></i><div><strong>Fast, reliable response</strong>Every inquiry is answered within one business day, without exception.</div></li>
+<li><i aria-hidden="true" class="fa-solid fa-chart-line"></i><div><strong>Proven track record</strong>248+ successful projects delivered, with a 96% client satisfaction rate.</div></li>
+<li><i aria-hidden="true" class="fa-solid fa-lock"></i><div><strong>Confidential by default</strong>Your business details and any shared links are reviewed privately by your strategist only.</div></li>
+</ul>
+</div>
+</aside>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+<div class="footer-main">
+<div class="footer-brand">
+<div class="footer-logo">
+<img alt="Sell Mek — Grow Your Digital Business" class="site-logo" src="assets/images/logo.png"/>
+</div>
+<p>
+                    We build memorable digital experiences and help
+                    ambitious brands grow with strategy and creativity.
+                </p>
+</div>
+<div class="footer-links">
+<div>
+<h4>Company</h4>
+<a href="about.html">About Us</a>
+<a href="services.html">Our Services</a>
+<a href="pricing.html">Pricing</a>
+</div>
+<div>
+<h4>Connect</h4>
+<a href="#">Instagram</a>
+<a href="#">Facebook</a>
+<a href="#">LinkedIn</a>
+</div>
+</div>
+<div class="footer-contact">
+<h4>Let's grow together</h4>
+<a href="mailto:hello@sellmek.com">hello@sellmek.com</a>
+<button class="footer-cta">Start a Project <span>↗</span></button>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Sell Mek. All rights reserved.</span>
+<span>Built for brands that want to grow.</span>
+</div>
+</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
